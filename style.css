@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --dark-grayish-cyan-2: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --light-grayish-cyan-2: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+}
+
+body {
+  background-color: var(--light-grayish-cyan);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: var(--white);
+  width: 100%;
+  max-width: 1080px;
+  border-radius: 11px;
+  padding: 23px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.selectTip {
+    width: 50%;
+}
+
+.showData {
+    width: 50%;
+    background-color: var(--very-dark-cyan);
+    border-radius: 11px;
+}
+
+.attribution {
+    margin-top: 20px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
