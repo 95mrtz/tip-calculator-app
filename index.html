@@ -18,55 +18,72 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <h1> Calculadora de propina / Tip calculator</h1>
+    <h1 class="title-app">Calculadora de propina / Tip calculator</h1>
     <main>
       <section class="ingressData">
         <article class="billData">
-          <span for="cost">Bill</span>
+          <span for="cost" class="cost-span">Bill</span>
           <input
             type="number"
             id="cost"
             name="cost"
-            placeholder="Enter the amount to pay"
+            class="cost"
+            placeholder="0"
+            min="0"
           />
         </article>
         <article class="selectTip">
-          <span> Select Tip % </span>
-          <div>
-            <button>5%</button>
-            <button>10%</button>
-            <button>15%</button>
-            <button>25%</button>
-            <button>50%</button>
-            <input type="text" id="custom" name="custom" placeholder="custom" />
+          <span class="selectTip-span"> Select Tip % </span>
+          <div class="buttons-tips">
+            <button class="btn-tip">5%</button>
+            <button class="btn-tip">10%</button>
+            <button class="btn-tip">15%</button>
+            <button class="btn-tip">25%</button>
+            <button class="btn-tip">50%</button>
+            <input
+              type="number"
+              id="custom"
+              name="custom"
+              placeholder="custom"
+              min="0"
+            />
           </div>
         </article>
         <article class="cantPeople">
-          <span for="cant">Number of People</span>
+          <div class="cant-spans">
+            <span for="cant" class="span-cant">Number of People</span>
+            <span for="cant" class="span-cant-alert">Cant be cero</span>
+          </div>
           <input
             type="number"
-            id="cant"
+            id="cant-input"
             name="cant"
-            placeholder="amount of people"
+            class="cant"
+            placeholder="0"
+            min="0"
           />
         </article>
       </section>
       <section class="showData">
-        <article>
-            <div>
-              <p> Tip Amount</p>
-              <span>/ person</span>
-            </div>
-            <h2 id="tipAmount"></h2>
-        </article>
-        <article>
+        <article class="tip-amount">
           <div>
-            <p> Total</p>
-            <span>/ person</span>
+            <p class="text-price">Tip Amount</p>
+            <span class="text-person">/ person</span>
           </div>
-          <h2 id="tipAmount"></h2>
-      </article>
-      <button> Reset </button>
+          <h2 class="amount">
+            $<span class="amount" id="span-tipAmount">0.00</span>
+          </h2>
+        </article>
+        <article class="show-total">
+          <div>
+            <p class="text-price">Total</p>
+            <span class="text-person">/ person</span>
+          </div>
+          <h2 class="amount">
+            $<span class="amount" id="span-totalAmount">0.00</span>
+          </h2>
+        </article>
+        <button class="btn-reset">Reset</button>
       </section>
     </main>
 

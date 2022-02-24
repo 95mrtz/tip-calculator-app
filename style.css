@@ -13,6 +13,11 @@
 * {
   font-family: "Space Mono", monospace;
   font-size: 24px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--very-dark-cyan);
+  outline: none!important;
 }
 
 body {
@@ -21,12 +26,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  max-height: 100%;
 }
 
 main {
   background-color: var(--white);
   width: 100%;
-  max-width: 1080px;
+  max-width: 70%;
   border-radius: 11px;
   padding: 23px;
   display: flex;
@@ -34,20 +41,185 @@ main {
   justify-content: flex-start;
 }
 
-.selectTip {
-    width: 50%;
+.title-app {
+  margin: 25px 0px;
+  color: var(--very-dark-cyan);
+}
+
+/* font size */
+.span-cant,
+.span-cant-alert,
+.cost-span,
+.selectTip-span {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dark-grayish-cyan);
+}
+
+.ingressData {
+  width: 50%;
+  padding: 0px 25px;
+}
+
+.billData,
+.selectTip,
+.cantPeople {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px;
+  width: 100%;
+  padding: 10px;
+}
+
+input {
+  text-align: right;
+  font-weight: 700;
+  padding: 3px;
+  padding-right: 8px;
+  border: 2px solid var(--white);
+  border-radius: 7px;
+  outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+input[type=number] { -moz-appearance:textfield; }
+
+.cost {
+  background-color: var(--light-grayish-cyan-2);
+  background-image: url("./images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 11px;
+  background-position-x: 6px;
+  background-position-y: 50%;
+}
+
+.buttons-tips {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 8px;
+}
+
+/* alternative with GRID 
+.buttons-tips {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-areas:
+    "btn btn btn"
+    "btn btn btn";
+  column-gap: 10px;
+  row-gap: 10px;
+}*/
+
+.btn-tip {
+  /*grid-area: "btn";*/
+  width: 30%;
+  background-color: var(--very-dark-cyan);
+  color: var(--white);
+  padding: 5px;
+  border-radius: 7px;
+  font-weight: 700;
+  border: 2px solid transparent;
+}
+
+.btn-tip:focus {
+  background-color: var(--strong-cyan);
+}
+
+#custom {
+  width: 30%;
+  text-align: center;
+  font-weight: 700;
+  padding: 5px;
+  border-radius: 7px;
+  border: 2px solid transparent;
+  color: var(--very-dark-cyan);
+  background-color: var(--light-grayish-cyan-2);
+}
+
+.cant-spans {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cant {
+  background-color: var(--light-grayish-cyan-2);
+  background-image: url("./images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 11px;
+  background-position-x: 6px;
+  background-position-y: 50%;
+}
+
+
+.cost:focus, .cant:focus, #custom:focus {
+  text-align: right;
+  color: var(--very-dark-cyan);
+  border: 2px solid var(--strong-cyan);
 }
 
 .showData {
-    width: 50%;
-    background-color: var(--very-dark-cyan);
-    border-radius: 11px;
+  width: 50%;
+  background-color: var(--very-dark-cyan);
+  border-radius: 9px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tip-amount, .show-total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.text-price {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.text-person {
+  color: var(--dark-grayish-cyan-2);
+  font-size: 16px;
+}
+
+.amount {
+  color: var(--strong-cyan);
+  font-size: xxx-large;
+}
+
+.btn-reset {
+  margin-top: auto;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  padding: 7px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: var(--strong-cyan);
+  filter: opacity(0.1);
+  color: var(--very-dark-cyan);
 }
 
 .attribution {
-    margin-top: 20px;
+  margin-top: 50px;
   text-align: center;
+  color: var(--dark-grayish-cyan-2);
 }
+
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--dark-grayish-cyan)
 }
