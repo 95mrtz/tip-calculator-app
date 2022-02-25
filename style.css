@@ -48,10 +48,15 @@ main {
 
 /* font size */
 .span-cant,
-.span-cant-alert,
 .cost-span,
 .selectTip-span {
   font-size: 16px;
+  font-weight: 700;
+  color: var(--dark-grayish-cyan);
+}
+
+#noZero {
+  font-size: 13px;
   font-weight: 700;
   color: var(--dark-grayish-cyan);
 }
