@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [IT'S ALIVE!])
+- Live Site URL: [IT'S ALIVE!](https://manuelrtz.github.io/tip-calculator-app/)
 
 ## My process
 
@@ -35,6 +35,6 @@ Users should be able to:
 ## Author
 
 - Frontend Mentor - [@manuelrtz](https://www.frontendmentor.io/profile/manuelrtz)
-- Twitter - [@Mannusho](https://www.twitter.com/Mannusho)
+- Twitter - [@Mannusho](https://www.twitter.com/mannusho)
 
 Thanks!
