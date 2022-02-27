@@ -44,6 +44,7 @@ main {
 .title-app {
   margin: 25px 0px;
   color: var(--very-dark-cyan);
+  text-align: center;
 }
 
 /* font size */
@@ -84,6 +85,7 @@ input {
   border: 2px solid var(--white);
   border-radius: 7px;
   outline: none;
+  cursor: pointer;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -130,10 +132,11 @@ input[type=number] { -moz-appearance:textfield; }
   width: 30%;
   background-color: var(--very-dark-cyan);
   color: var(--white);
-  padding: 5px;
+  padding: 10px;
   border-radius: 7px;
   font-weight: 700;
   border: 2px solid transparent;
+  cursor: pointer;
 }
 
 .btn-tip:focus {
@@ -144,11 +147,12 @@ input[type=number] { -moz-appearance:textfield; }
   width: 30%;
   text-align: center;
   font-weight: 700;
-  padding: 5px;
+  padding: 10px;
   border-radius: 7px;
   border: 2px solid transparent;
   color: var(--very-dark-cyan);
   background-color: var(--light-grayish-cyan-2);
+  cursor: pointer;
 }
 
 .cant-spans {
@@ -165,6 +169,7 @@ input[type=number] { -moz-appearance:textfield; }
   background-size: 11px;
   background-position-x: 6px;
   background-position-y: 50%;
+  cursor: pointer;
 }
 
 
@@ -217,14 +222,78 @@ input[type=number] { -moz-appearance:textfield; }
   background-color: var(--strong-cyan);
   filter: opacity(0.1);
   color: var(--very-dark-cyan);
+  cursor: pointer;
 }
 
+.btn-reset:hover {
+  background-color: var(--light-grayish-cyan);
+}
+
+
 .attribution {
-  margin-top: 50px;
+  margin: 25px 0px;
   text-align: center;
   color: var(--dark-grayish-cyan-2);
 }
 
 .attribution a {
   color: var(--dark-grayish-cyan)
+}
+
+
+@media only screen and (max-width: 980px) {
+ 
+  body {
+    background-color: var(--light-grayish-cyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  main {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .ingressData {
+    width: 100%;
+  }
+
+  .showData {
+    width: 100%;
+  }
+  
+  .buttons-tips {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    column-gap: 15px;
+  }
+  
+  .btn-tip {
+    /*grid-area: "btn";*/
+    width: 48%;
+  }
+  
+  #custom {
+    width: 48%;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .btn-tip {
+    /*grid-area: "btn";*/
+    width: 98%;
+  }
+  
+  #custom {
+    width: 98%;
+  }
 }
